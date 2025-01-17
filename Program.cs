@@ -15,29 +15,29 @@ class Program
         string naam = Console.ReadLine();
         organisme2.WijzigNaam(naam);
 
-        // Organisme organisme = new Organisme();
+        Organisme organisme = new Organisme();
         
-        // organisme.Beschrijving();
+        organisme.Beschrijving();
 
-        // organisme.LaadOrganismesVanBestand();
+        organisme.LaadOrganismesVanBestand();
 
-        // organisme.ToonOrganismes();
+        organisme.ToonOrganismes();
 
 
-        // Organisme organisme1 = new Organisme();
-        // Organisme organisme2 = new Organisme();
-        
-
-        // Leefomgeving bos = new Leefomgeving("Bos");
+        Organisme organisme1 = new Organisme();
+        Organisme organisme3 = new Organisme();
         
 
-        // bos.VoegOrganismeToe(organisme1);
-        // bos.VoegOrganismeToe(organisme2);
+        Leefomgeving bos = new Leefomgeving("Bos");
+        
+
+        bos.VoegOrganismeToe(organisme1);
+        bos.VoegOrganismeToe(organisme3);
         
       
-        // bos.ToonOrganismen();
+        bos.ToonOrganismen();
 
-        // ConsoleInteractie();
+        ConsoleInteractie();
 
     }
 
