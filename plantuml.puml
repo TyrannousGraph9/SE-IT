@@ -1,0 +1,43 @@
+@startuml
+
+class Program {
+    + Main()
+    + ConsoleInteractie()
+    + VoegOrganisme()
+    + FilterSpecifiek(string filter)
+}
+
+class Organisme2 {
+    - string _naam
+    + string _oorsprong
+    + Type _type
+    + WijzigNaam(string nieuweNaam)
+    + TypeVanuitString(string type)
+}
+
+class Organisme {
+    - string naam
+    - string type
+    - string oorsprong
+    + Beschrijving() : string
+    + LaadOrganismesVanBestand()
+    + ToonOrganismes()
+    + MaakOrganisme(string naam, string type, string oorsprong)
+    + ZoekOrganismeOpType(string type, string naam)
+    + ZoekOrganismeOpOorsprong(string oorsprong, string naam)
+}
+
+class Leefomgeving {
+    + string Naam
+    + List<Organisme> Organismen
+    + Leefomgeving(string naam)
+    + VoegOrganismeToe(Organisme organisme)
+    + ToonOrganismen()
+}
+
+Program -> Organisme2 : uses
+Program -> Organisme : uses
+Program -> Leefomgeving : uses
+Leefomgeving "1" *-- "many" Organisme : contains
+
+@enduml
